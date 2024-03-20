@@ -181,10 +181,13 @@ a:hover {
   }
 
   .tabela td.descricao {
-  text-align: center; /* Centraliza o texto horizontalmente */
- vertical-align: text-bottom;/* Centraliza o texto verticalmente */
-  line-height: 1.5; /* Espaçamento entre as linhas de texto */
-}
+    text-align: center;
+    /* Centraliza o texto horizontalmente */
+    vertical-align: text-bottom;
+    /* Centraliza o texto verticalmente */
+    line-height: 1.5;
+    /* Espaçamento entre as linhas de texto */
+  }
 }
 
 h3 {
