@@ -1,6 +1,64 @@
 @import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@100..900&display=swap');
 
 
+/*** Estilização do Campo Cor Favorita ***/
+
+#cor-favorita{
+    width: 200px;
+    padding: 5px 20px;
+    border-radius: 5px;
+}
+
+#cor-favorita option{
+
+    width: 200px;
+    padding: 5px 20px;
+}
+
+#cor-favorita option[value="Vermelho"]{
+    background-color: red;
+}
+
+#cor-favorita option[value="Verde"]{
+    background-color: green;
+}
+
+#cor-favorita option[value="Azul"]{
+    background-color: blue;
+}
+
+/*** Estilização do Campo Nome ***/
+
+input#campo_nome{
+    width: 200px;
+    padding: 5px 20px;
+    border-radius: 5px;
+    border: 0 transparent;
+    outline: 0 transparent;
+
+    transition: all 0.5s;
+}
+
+input#campo_nome:focus{
+    background: #22d7ff;
+    width: 250px;
+}
+
+/*** Estilizando o Campo Enviar ***/
+
+input[type="submit"]{
+    width: 200px;
+    padding: 5px 20px;
+    border-radius: 5px;
+    background-color: rgb(9, 85, 140);
+    transition: all0.5s;
+}
+
+input[type="submit"]:hover{
+    background-color: aqua;
+}
+
+
 /* Reset CSS */
 * {
     margin: 0;
