@@ -1,1 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato - Isabela Martins</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        function showForm() {
+            document.getElementById('contact-form').style.display = 'block';
+            document.getElementById('message-link').style.display = 'none';
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="Agenda.html">Agenda</a>
+            <a href="Discografia.html">Discografia</a>
+            <a href="Ouca.html">Ouça</a>
+            <a href="Biografia.html">Biografia</a>
+            <a href="Contato.html">Contato</a>
+            <a href="AlbumFotos.html">Álbum de Fotos</a>
+        </nav>
+    </header>
 
+    <div class="container">
+        <section id="image-section">
+            <img src="img/isabela-martins.jpg" alt="Isabela Martins">
+        </section>
+
+        <aside id="contact-info">
+            <h2>Informações de Contato</h2>
+            <div class="contact-item">
+                <h3>Contato para Show</h3>
+                <p>Telefone: (11) 1234-5678</p>
+                <p>Email: shows@isabelamartins.com.br</p>
+            </div>
+            <div class="contact-item">
+                <h3>Fã Clube</h3>
+                <p>Email: fanclube@isabelamartins.com.br</p>
+            </div>
+            <div class="contact-item">
+                <h3>Campanhas Publicitárias</h3>
+                <p>Email: publicidade@isabelamartins.com.br</p>
+            </div>
+            <div class="contact-item">
+                <h3>Correspondência</h3>
+                <p>Rua das Flores, 123</p>
+                <p>Brasil, Cidade XYZ, 12345-678</p>
+            </div>
+            <p id="message-link"><a href="javascript:void(0)" onclick="showForm()">Deseja mandar uma mensagem?</a></p>
+        </aside>
+
+        <section id="contact-form" style="display: none;">
+            <h2>Contato</h2>
+            <form action="enviar_contato.php" method="post">
+                <label for="name">Nome:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Mensagem:</label>
+                <textarea id="message" name="message" required></textarea>
+
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </div>
+</body>
+</html>
