@@ -1,0 +1,174 @@
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #121212;
+  color: #ffffff;
+  margin: 0;
+  padding: 0;
+}
+.container {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+header {
+  background: #000000;
+  color: #ffffff;
+  padding: 10px 0;
+  width: 100%;
+}
+header nav {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+header nav a {
+  color: #ffffff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 14px;
+  padding: 10px 20px;
+  transition: background-color 0.3s ease;
+}
+header nav a:hover {
+  background-color: #333333;
+}
+#image-section {
+  flex: 1;
+  text-align: center;
+  margin-right: 20px;
+}
+#image-section img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+#contact-info {
+  flex: 1;
+  padding: 30px;
+  background: #1c1c1c;
+  border-radius: 5px;
+}
+#contact-info h2 {
+  color: #ffffff;
+}
+.contact-item {
+  margin-bottom: 20px;
+}
+.contact-item h3 {
+  margin: 0 0 10px 0;
+  color: #bbbbbb;
+}
+.contact-item p {
+  margin: 0;
+  color: #dddddd;
+}
+#message-link {
+  color: #bbbbbb;
+  margin-top: 20px;
+}
+#message-link a {
+  color: #50b3a2;
+  text-decoration: none;
+}
+#message-link a:hover {
+  text-decoration: underline;
+}
+#contact-form {
+  flex: 2;
+  padding: 30px;
+  background: #1c1c1c;
+  margin-top: 20px;
+  border-radius: 5px;
+  display: none;
+}
+#contact-form h2 {
+  color: #ffffff;
+}
+#contact-form form {
+  display: flex;
+  flex-direction: column;
+}
+#contact-form label {
+  margin-top: 10px;
+  color: #bbbbbb;
+}
+#contact-form input, #contact-form textarea {
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #333333;
+  border-radius: 5px;
+  background-color: #333333;
+  color: #ffffff;
+}
+#contact-form button {
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #000000;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+#contact-form button:hover {
+  background-color: #333333;
+}
+
+
+
+
+/*Começo da Parte da Helo */ 
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+
+nav{
+  padding:5px;
+  margin-left: 1%;
+  margin: 2%;
+  padding: 0.3%;
+  font-size: 15px;
+  display: flex;
+
+}
+
+nav a{
+  color: white;
+  text-decoration: none;
+  padding:0px 50px 10px 0px;
+  position:relative;
+}
+
+/* "::after" é um pseudoelemento, voce adiciona outro elemento depois do elemento "nav a", que no caso vai ser a "borda de baixo"
+content=" " para dizer que o conteúdo dessa nav é vazia*/
+nav a::after{
+  content: " ";
+  width: 0%;
+  height: 2px;
+  background-color: white;
+  position: absolute;
+  bottom:0;
+  left: 0;
+  transition: 0.3s ease-in-out;
+}
+/*ease-in-out serve para que ele comece suave e termine suave*/
+
+nav a:hover::after{
+  width: 100%;
+}
+body{
+  background-color: black;
+}
+
+
+
+
+/*Fim da Parte da Helo */
+
+
+
