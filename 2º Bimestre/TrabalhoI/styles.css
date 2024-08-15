@@ -49,6 +49,7 @@ nav a:hover::after {
 /***   Fim da Parte da Helooo  ***/
 
 
+/***  COMEÇO DA PARTE DE CONTATO ***/
 header {
   background-color: #591218; /* Cor de fundo do header */
   padding: 10px 0;
@@ -62,7 +63,9 @@ header {
   gap: 20px; /* Espaço entre as seções */
   height: 100vh; /* Altura da viewport */
   overflow: hidden; /* Esconde rolagem global */
+  background-color: #591218;
 }
+
 
 /** Começo da Parte da Imagem **/
 #secao-img {
@@ -71,7 +74,7 @@ header {
   height: 100%;
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
   margin-right: 360px;
-
+  background-color: #591218;
 }
 
 #secao-img img {
@@ -83,8 +86,8 @@ header {
   color: #E8F2D0;
   border-radius: 18px;
 }
-
 /** Fim da Parte da Imagem **/
+
 
 /** Começo da Parte de Contato **/
 #contato-inf {
@@ -134,30 +137,75 @@ header {
 }
 /** Fim da Parte de Contato **/
 
+
 /** Começo da Parte do Formulario **/
-#contato-forma {
-  flex: 1;
-  background-color: #591218; /* Cor de fundo da área de formulário de contato */
-  padding: 20px;
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: none;
+  z-index: 100;
+}
+
+.contact-form {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #591218;
+  padding: 30px;
   border-radius: 10px;
-  margin-left: 20px;
+  width: 90%;
+  max-width: 500px;
+  z-index: 200;
+  display: none;
+}
+
+.contact-form .form-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.contact-form .form-header h2 {
+  margin: 0;
   color: #E8F2D0;
 }
 
-#contato-forma label, #contato-forma input, #contato-forma textarea, #contato-forma button {
-  display: block;
-  width: 100%;
-  margin-bottom: 10px;
+.contact-form .form-header button {
+  background-color: transparent;
+  border: none;
+  color: #E8F2D0;
+  font-size: 24px;
+  cursor: pointer;
+  position: calc();
+  
 }
 
-#forma-contato input, #forma-contato textarea {
+.contact-form label, 
+.contact-form input, 
+.contact-form textarea, 
+.contact-form button {
+  display: block;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.contact-form input, 
+.contact-form textarea {
   padding: 10px;
   border: 1px solid #D9763D;
   border-radius: 5px;
   background-color: #E8F2D0;
+  color: #591218;
 }
 
-#forma-contato button {
+.contact-form button {
   background-color: #D9763D;
   color: white;
   border: none;
@@ -166,10 +214,15 @@ header {
   cursor: pointer;
 }
 
-#forma-contato button:hover {
+.contact-form button:hover {
   background-color: #BF4F26;
 }
+
+body.blur {
+  filter: blur(5px);
+}
 /** Fim da Parte do Formulario **/
+
 
 /** Começo da Parte das Midias Socias **/
 #social-midia {
@@ -203,50 +256,77 @@ header {
 #social-midia .social-icon:first-of-type {
   margin-top: o; /* Remove margem superior do primeiro ícone */
 }
+/*** FIM DA PARTE DE CONTATO  ***/
 
 
-.platforms {
+.ouca-section {
   background-color: #f7f7f7;
-  padding: 40px 20px;
-  text-align: center;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.platforms h2 {
+.ouca-title {
+  margin-top: 0;
+}
+
+#plataformas {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#plataformas li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+#plataformas a {
+  color: #337ab7;
+  text-decoration: none;
+}
+
+#plataformas a:hover {
+  color: #23527c;
+}
+
+#plataformas i {
   font-size: 24px;
+  margin-right: 10px;
+}
+
+.album-container {
+  margin-top: 20px;
+}
+
+.album {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   margin-bottom: 20px;
 }
 
-.platforms-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.platform {
-  margin: 10px;
+.album img {
   width: 100px;
-}
-
-.platform a {
-  display: block;
-  width: 100%;
-  height: 100%;
-  background-size: cover;
-  background-position: center;
+  height: 100px;
   border-radius: 50%;
-  transition: all 0.3s ease-in-out;
+  margin-bottom: 10px;
 }
 
-.platform a:hover {
-  transform: scale(1.1);
+.album h3 {
+  margin-top: 0;
 }
 
-.platform img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 50%;
+.platform-icons {
+  margin-top: 10px;
+}
+
+.platform-icons a {
+  margin-right: 10px;
+}
+
+.platform-icons img {
+  width: 24px;
+  height: 24px;
 }
