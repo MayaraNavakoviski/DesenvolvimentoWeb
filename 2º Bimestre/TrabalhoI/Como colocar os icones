@@ -1,0 +1,54 @@
+1 - Colocar este link dentro do head:    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+2 - Colocar essa parte dentro do codigo html antes da ultima div terminar:
+   <div id="social-midia">
+                <a href="https://instagram.com/MarcelaAzevedo" target="_blank" class="social-icon">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://facebook.com/MarcelaAzevedo" target="_blank" class="social-icon">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://x.com/MarcelaAzevedo" target="_blank" class="social-icon">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://youtube.com/MarcelaAzevedo" target="_blank" class="social-icon">
+                    <i class="fab fa-youtube"></i>
+                </a>
+                <p class="social-nome">Marcela Azevedo</p>
+            </div>
+
+3 - Colocar isso no css:
+   /**** Icones ***/
+#social-midia {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza ícones e nome */
+    justify-content: flex-start;
+    position: fixed;
+    right: 0; /* Cola à borda direita */
+    top: 50%; /* Posiciona verticalmente no meio da página */
+    transform: translateY(-50%); /* Ajusta o alinhamento vertical */
+    z-index: 1000; /* Coloca acima de outros elementos */
+  }
+  
+  #social-midia .social-icon {
+    margin-bottom: 20px; /* Espaço entre ícones */
+  }
+  
+  #social-midia .social-icon i {
+    font-size: 32px; /* Tamanho dos ícones */
+    color: #f7e0cb; /* Cor dos ícones sociais */
+  }
+  
+  #social-midia .social-nome {
+    font-family: 'Arvo', serif;
+    font-style: italic;
+    color: #f7e0cb; /* Cor do nome */
+    transform: rotate(-90deg); /* Nome deitado */
+    white-space: nowrap;
+    margin-top: 50px;
+  }
+  
+  #social-midia .social-icon:first-of-type {
+    margin-top: 0; /* Remove a margem superior do primeiro ícone */
+  }
