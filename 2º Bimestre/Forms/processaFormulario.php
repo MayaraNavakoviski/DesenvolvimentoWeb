@@ -1,7 +1,7 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   
-   // Recebe os dados do formulário
+   //  RECEBE OS DADOS DO FORMULÁRIO
    $nome = $_POST['nome'];
    $email = $_POST['email'];
 
@@ -10,7 +10,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
        echo "Todos os campos são obrigatórios!";
   
    } else {
-       // Processa os dados (por exemplo, salva no banco de dados)
+       // PROCESSA OS DADOS
         echo "Nome: " . htmlspecialchars($nome) . "<br>";
         echo "Email: " . htmlspecialchars($email);
         header("Location: obrigado.php?nome=" .$nome ."&email= " . $email);
