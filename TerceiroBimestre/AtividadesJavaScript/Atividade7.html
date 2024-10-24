@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 7</title>
+
+
+   
+
+</head>
+<body>
+
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        img{
+
+            min-width: 200px;
+            height: 800px;
+        }
+
+    </style>
+
+    <img src="https://www.shutterstock.com/image-photo/scooby-doo-scrappy-eating-food-600nw-2502783739.jpg" alt="S1e13_Boss_Mabel">
+
+    <h2></h2>
+
+    <script>
+
+    const texto = document.querySelector('h2');
+
+    const imagem = document.querySelector('img');
+
+    imagem.addEventListener('mouseenter', function(){
+
+        texto.innerText = "Scooby Doooooo!!";
+
+        console.log(texto);
+    });
+
+    imagem.addEventListener('mouseleave', function(){
+
+    texto.innerText = "Salsichaaaaaaa!!";
+
+
+    });
+
+    imagem.addEventListener('mousemove', function(){
+
+    texto.innerText = "Eu quero biscoitoooooos!!!";
+
+    });
+
+    imagem.addEventListener('click', function(){
+
+    texto.innerText = "Cadê os meus biscoitooooooos!!!!";
+
+    });
+
+
+
+    </script>
+    
+</body>
+</html>
