@@ -1,31 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Desafio 5</title>
+    <meta name="viewport" content="width=
+, initial-scale=1.0">
+    <title>Document</title>
 </head>
-
 <body>
 
-    <button> clique aqui para mais </button>
+    <button>CLIQUE AQUI PARA MAIS</button>
 
+    <h1>Séries Favoritaa</h1>
+
+    <li>Gilmore Girls</li>
+    <li>The Vampire Diares</li>
+    <li>The Originas</li>
 
     <script>
-        let contador = 0;
-        const lista = document.getElementsByTagName('li');
+
         const botao = document.querySelector('button');
-        botao.addEventListener('click', () => {
-            console.log("foi clicado");
-            contador++;
-            const adicionar = document.createElement("li");
-            adicionar.textContent = contador;
-            document.body.appendChild(adicionar);
+
+        const lista = document.querySelector('li');  
+
+        botao.addEventListener('click', function(){
+
+            const adiciona = document.createElement('li');
+
+            adiciona.textContent = 'Modern Family';
+
+            lista.appendChild(adiciona);
+
         });
+        
+
     </script>
-
+    
 </body>
-
 </html>
