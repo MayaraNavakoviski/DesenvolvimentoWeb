@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 9</title>
+
+    <style>
+
+        
+
+        .temaEscuro{
+            background-color: black;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <button> <h1> Mude o tema do site </h1> </button>
+    
+
+    <script>
+
+        const botao = document.querySelector("button");
+
+        botao.addEventListener('click', ()=> {
+            document.body.classList.toggle('temaEscuro');
+
+            localStorage.setItem('tema', 'temaEscuro');
+
+
+        })
+
+        document.addEventListener('DOMContentLoaded', ()=> {
+
+            const tema = localStorage.getItem('tema');
+
+            console.log(tema);
+
+            document.body.classList.add(tema);
+        })
+      
+    </script>
+    
+</body>
+</html>
