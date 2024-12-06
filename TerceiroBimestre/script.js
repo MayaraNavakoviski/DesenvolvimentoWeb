@@ -1,11 +1,13 @@
+let ajax = new XMLHttpRequest();
 
+ajax.open('GET', "http://viacep.com.br/");
 
-const input = document.querySelector('input');
-const botao = document.querySelector('button');
-const lista = document.querySelector('ul');
+ajax.onload = function() {
+    if (ajax.status == 200) {
+        console.log("Resposta: ", JSON.parse(ajax.responseText));
+    } else{
+        console.error("Erro: ", ajax.status, ajax.statusText);
+    }
+}
 
-botao.addEventListener('click', ()=> {
-
-    let novaTarefa = document.createElement('li')
-
-})
+ajax.send(null);
